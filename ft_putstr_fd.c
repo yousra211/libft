@@ -6,11 +6,12 @@
 /*   By: yhamdaou <yhamdaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 14:31:53 by yhamdaou          #+#    #+#             */
-/*   Updated: 2025/10/17 14:33:21 by yhamdaou         ###   ########.fr       */
+/*   Updated: 2025/10/28 19:37:29 by yhamdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include <fcntl.h>
 
 void	ft_putstr_fd(char *s, int fd)
 {
@@ -22,4 +23,11 @@ void	ft_putstr_fd(char *s, int fd)
 		write(fd, &s[i], 1);
 		i++;
 	}
+}
+int main()
+{
+	int fd = open("fd2.txt", O_WRONLY);
+	
+	ft_putstr_fd("hello", fd);
+	close(fd);
 }

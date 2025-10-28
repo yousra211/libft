@@ -6,7 +6,7 @@
 /*   By: yhamdaou <yhamdaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 17:56:06 by yhamdaou          #+#    #+#             */
-/*   Updated: 2025/10/23 12:10:08 by yhamdaou         ###   ########.fr       */
+/*   Updated: 2025/10/27 16:59:30 by yhamdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,3 +26,36 @@ void	*ft_memset(void *pointer, int value, size_t count)
 	}
 	return (pointer);
 }
+
+
+// #include <string.h> 
+// #include <stdio.h>
+// int main()
+// {
+// 	int j = 0;
+// 	int *p = &j;
+
+// 	ft_memset(p, 0, 4);
+// 	ft_memset(p, 0, 3);
+// 	ft_memset(p, 5, 2);
+// 	ft_memset(p,57,1);
+	
+// 	// // printf("%d\n", j);
+// 	printf("%d\n\n", *p);
+	
+
+// 	char b[7];
+// 	ft_memset(b, 57, 1);
+// 	ft_memset(b+1, 5, 1);
+// 	ft_memset(b+2,0,1);
+// 	ft_memset(b+3,0,1);
+// 	printf("%d\n", *(int *)b);
+
+// 	char c[7];
+// 	ft_memset(b, 'c', 1);
+// 	ft_memset(b+1, 'a', 1);
+// 	ft_memset(b+2,'l',1);
+// 	ft_memset(b+3,'l',1);
+// 	printf("%c\n", *(b + 1));
+// 	printf("%c\n", *b + 1);
+// }

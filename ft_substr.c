@@ -6,35 +6,11 @@
 /*   By: yhamdaou <yhamdaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 14:23:30 by yhamdaou          #+#    #+#             */
-/*   Updated: 2025/10/22 11:22:50 by yhamdaou         ###   ########.fr       */
+/*   Updated: 2025/10/28 17:35:59 by yhamdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-
-size_t	ft_strlen(const char *str)
-{
-	size_t	i;
-
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
-}
-
-char	*ft_strncpy(char *dest, const char *src, int n)
-{
-	int	i;
-
-	i = 0;
-	while (src[i] && i < n)
-	{
-		dest[i] = src[i];
-		i++;
-	}
-	dest[i] = '\0';
-	return (dest);
-}
+#include "libft.h"
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
@@ -58,7 +34,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	substring = malloc((len + 1) * sizeof(char));
 	if (!substring)
 		return (NULL);
-	substring = ft_strncpy(substring, &s[start], len);
+	ft_strlcpy(substring, &s[start], (len + 1));
 	return (substring);
 }
 // int main()
@@ -66,9 +42,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 // 	char *s = ft_substr("helloooooo" , 3, 4);
 // 	printf("%s", s);
 // }
-	// while (i < len)
-	// {
-	// 	substring[i] = s[start + i];
-	// 	i++;
-	// }
-	// substring[i] = '\0';

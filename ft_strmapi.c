@@ -6,12 +6,18 @@
 /*   By: yhamdaou <yhamdaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 16:49:13 by yhamdaou          #+#    #+#             */
-/*   Updated: 2025/10/17 13:10:12 by yhamdaou         ###   ########.fr       */
+/*   Updated: 2025/10/28 19:05:03 by yhamdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
+
+char    to_upper_odd(unsigned int i, char c)
+{
+    if (i % 2 == 1 && c >= 'a' && c <= 'z')
+        return (c - 32);
+    return (c);
+}
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
@@ -33,4 +39,11 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	}
 	str[i] = '\0';
 	return (str);
+}
+int main()
+{
+	char *dst = "hello";
+	dst = ft_strmapi("hellowbw", to_upper_odd);
+	printf("%s", dst);
+
 }

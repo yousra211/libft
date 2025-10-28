@@ -6,33 +6,11 @@
 /*   By: yhamdaou <yhamdaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 15:16:06 by yhamdaou          #+#    #+#             */
-/*   Updated: 2025/10/17 14:39:03 by yhamdaou         ###   ########.fr       */
+/*   Updated: 2025/10/28 17:41:07 by yhamdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <unistd.h>
-
-// void	ft_putnbr(int n)
-// {
-// 	long	x = n;
-// 	char	c;
-// 	if (x < 0)
-// 	{
-// 		write(1, '-', 1);
-// 		x = -x;
-// 	}
-// 	if (x > 9)
-// 	{
-// 		ft_putnbr(x / 10);
-// 		ft_putnbr(x % 10);
-// 	}
-// 	else
-// 	{
-// 		c = x + '0';
-// 		write(1, &c, 1);
-// 	}
-// }
+#include "libft.h"
 
 int	ft_len(int n)
 {

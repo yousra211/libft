@@ -6,7 +6,7 @@
 /*   By: yhamdaou <yhamdaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 14:42:28 by yhamdaou          #+#    #+#             */
-/*   Updated: 2025/10/22 11:43:24 by yhamdaou         ###   ########.fr       */
+/*   Updated: 2025/10/28 17:40:54 by yhamdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,10 @@
 # define LIBFT_H
 
 # include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
+#include <limits.h>
+#include <unistd.h>
 
 typedef struct s_list
 {

@@ -6,11 +6,11 @@
 /*   By: yhamdaou <yhamdaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 18:23:11 by yhamdaou          #+#    #+#             */
-/*   Updated: 2025/10/23 12:11:58 by yhamdaou         ###   ########.fr       */
+/*   Updated: 2025/10/27 12:13:24 by yhamdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
@@ -28,3 +28,10 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	}
 	return (dst);
 }
+// int main()
+// {
+// 	//char dst[] = "hello";
+// 	char src[] = "world";
+// 	ft_memcpy(src, src + 3, 2);
+// 	printf("%s", src);
+// }

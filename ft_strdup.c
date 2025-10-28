@@ -6,11 +6,11 @@
 /*   By: yhamdaou <yhamdaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 14:15:45 by yhamdaou          #+#    #+#             */
-/*   Updated: 2025/10/23 12:08:45 by yhamdaou         ###   ########.fr       */
+/*   Updated: 2025/10/28 17:34:17 by yhamdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 char	*ft_strdup(const char *s1)
 {
@@ -33,5 +33,7 @@ char	*ft_strdup(const char *s1)
 // int main()
 // {
 // 	char *dst = ft_strdup("hello");
-// 	printf("%s", dst);
+// 	printf("%s\n", dst);
+// 	char *dst1 = strdup("hello");
+// 	printf("%s", dst1);
 // }

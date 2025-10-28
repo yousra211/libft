@@ -6,39 +6,11 @@
 /*   By: yhamdaou <yhamdaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 11:32:16 by yhamdaou          #+#    #+#             */
-/*   Updated: 2025/10/22 11:36:40 by yhamdaou         ###   ########.fr       */
+/*   Updated: 2025/10/28 17:10:08 by yhamdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-
-int	ft_strlen(const char *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
-}
-
-char	*ft_strcat(char *dst, const char *src)
-{
-	size_t	dstlen;
-	size_t	i;
-
-	dstlen = 0;
-	i = 0;
-	while (dst[dstlen])
-		dstlen++;
-	while (src[i])
-	{
-		dst[dstlen + i] = src[i];
-		i++;
-	}
-	dst[dstlen + i] = '\0';
-	return (dst);
-}
+#include "libft.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
@@ -64,14 +36,14 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		str[i] = s1[i];
 		i++;
 	}
-	str = ft_strcat(str, s2);
+	ft_strlcat(str, s2, (s1len + s2len + 1));
 	return (str);
 }
 
-// int main()
-// {
-// 	char *s1 = NULL;
-// 	char *s2 = "girl";
-// 	char *str = ft_strjoin(s1, s2);
-// 	printf("%s",str);
-// }
+int main()
+{
+	char *s1 = NULL;
+	char *s2 = "girl";
+	char *str = ft_strjoin(s1, s2);
+	printf("%s",str);
+}

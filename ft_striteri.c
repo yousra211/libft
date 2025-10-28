@@ -6,9 +6,16 @@
 /*   By: yhamdaou <yhamdaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 13:04:48 by yhamdaou          #+#    #+#             */
-/*   Updated: 2025/10/17 14:26:23 by yhamdaou         ###   ########.fr       */
+/*   Updated: 2025/10/28 19:04:21 by yhamdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+
+void    to_upper_odd(unsigned int i, char *c)
+{
+    if (i % 2 == 1 && *c >= 'a' && *c <= 'z')
+        *c = (*c - 32);
+}
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
@@ -23,4 +30,11 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 			i++;
 		}
 	}
+}
+int main()
+{
+	char s[] = "hellloow";
+	ft_striteri(s, to_upper_odd);
+	printf("%s", s);
+	
 }

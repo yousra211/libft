@@ -6,7 +6,7 @@
 /*   By: yhamdaou <yhamdaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 15:23:41 by yhamdaou          #+#    #+#             */
-/*   Updated: 2025/10/23 12:15:05 by yhamdaou         ###   ########.fr       */
+/*   Updated: 2025/10/25 11:36:03 by yhamdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	ft_isdigit(int c)
 
 // int main()
 // {
-// 	int i = ft_isdigit('g');
-// 	int j = isdigit('g');
+// 	int i = ft_isdigit('2');
+// 	int j = isdigit('1');
 // 	printf("%d \n%d \n", i , j);
 // }

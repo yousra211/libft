@@ -6,11 +6,13 @@
 /*   By: yhamdaou <yhamdaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 18:19:00 by yhamdaou          #+#    #+#             */
-/*   Updated: 2025/10/23 12:18:35 by yhamdaou         ###   ########.fr       */
+/*   Updated: 2025/10/27 16:59:52 by yhamdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
 
 void	ft_bzero(void *s, size_t n)
 {
@@ -22,6 +24,26 @@ void	ft_bzero(void *s, size_t n)
 	while (i < n)
 	{
 		ptr[i] = '\0';
+		i++;
+	}
+}
+int main()
+{
+	int i = 0;
+	unsigned char *p = malloc(4);
+	ft_bzero(p, 4);
+	while(i < 4)
+	{
+		printf("%c\n",p[i]);
+		i++;
+	}
+	printf("\n");
+	unsigned char *ptr = malloc(4);
+	bzero(ptr, 4);
+	i = 0;
+	while(i < 4)
+	{
+		printf("%c\n",ptr[i]);
 		i++;
 	}
 }

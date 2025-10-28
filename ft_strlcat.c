@@ -6,13 +6,14 @@
 /*   By: yhamdaou <yhamdaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 18:52:29 by yhamdaou          #+#    #+#             */
-/*   Updated: 2025/10/23 12:08:08 by yhamdaou         ###   ########.fr       */
+/*   Updated: 2025/10/28 17:08:36 by yhamdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-// #include <stdio.h>
-// #include <string.h>
+#include <stdio.h>
+#include <string.h>
+#include "libft.h"
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
@@ -20,18 +21,16 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	size_t	srclen;
 	size_t	i;
 
-	dstlen = 0;
-	srclen = 0;
 	i = 0;
-	while (dst[dstlen])
-		dstlen++;
-	while (src[srclen])
-		srclen++;
+	srclen = ft_strlen(src);
+	if (!dst)
+		return (srclen + dstsize);
+	dstlen = ft_strlen(dst);
 	if (dstsize <= dstlen)
 		return (srclen + dstsize);
 	else
 	{
-		while (src[i] && i < dstsize - 1)
+		while (src[i] && i < dstsize - dstlen - 1)
 		{
 			dst[dstlen + i] = src[i];
 			i++;
@@ -43,8 +42,13 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 
 // int main()
 // {
-// 	char str[15] = "hello";
-// 	size_t i = ft_strlcat(str , "worlde", 4);
-// 	size_t j = strlcat(str , "worlde", 4);
-// 	printf("%zu\n%zu\n", i, j);
-// }
+// 	char str[5] = "hey";
+// 	size_t i = ft_strlcat(str , "worlde", 2);
+// 	printf("%zu\n", i);
+// 	printf("%s\n", str);
+
+// 	char str1[5] = "hey";
+// 	size_t j = strlcat(str1 , "worlde", 2);
+// 	printf("%zu\n", j);
+// 	printf("%s\n", str1);
+//  }

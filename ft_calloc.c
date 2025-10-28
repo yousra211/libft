@@ -6,11 +6,11 @@
 /*   By: yhamdaou <yhamdaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 13:09:29 by yhamdaou          #+#    #+#             */
-/*   Updated: 2025/10/23 12:17:26 by yhamdaou         ###   ########.fr       */
+/*   Updated: 2025/10/28 16:31:51 by yhamdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 void	*ft_calloc(size_t count, size_t size)
 {
@@ -29,4 +29,20 @@ void	*ft_calloc(size_t count, size_t size)
 		i++;
 	}
 	return ((void *)ptr);
+}
+int main()
+{
+	char *str = malloc(2);
+	char *str1 = ft_calloc(2, 1);
+	int i = 0;
+	while(str[i])
+	{	
+		printf("%d", str[i]);
+		i++;
+	}
+	// while(*str1)
+	// {
+	// 	printf("%c", *str1);
+	// 	str1++;
+	// }
 }
