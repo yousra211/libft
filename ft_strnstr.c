@@ -6,7 +6,7 @@
 /*   By: yhamdaou <yhamdaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 12:12:41 by yhamdaou          #+#    #+#             */
-/*   Updated: 2025/10/28 12:35:09 by yhamdaou         ###   ########.fr       */
+/*   Updated: 2025/10/28 21:28:57 by yhamdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strnstr(const char *str, const char *needle, size_t len)
 	i = 0;
 	j = 0;
 	int s_len = ft_strlen(needle);
-	while (str[i + j] && needle[j] && i < len)
+	while (i < len && str[i + j] && needle[j])
 	{
 		if (str[i + j] == needle[j])
 			j++;
@@ -36,8 +36,9 @@ char	*ft_strnstr(const char *str, const char *needle, size_t len)
 }
 int main()
 {
-	char *s = ft_strnstr("hello", "llo", 7);
-	printf("%s\n", s);
-	char *s1 = strnstr("hello", "llo", 7);
-	printf("%s", s1);
+	char *s = "hello";
+	char *str = ft_strnstr(NULL,s, 0);
+	printf("%s\n", str);
+	// char *s1 = strnstr(NULL, s, 0);
+	// printf("%s", s1);
 }

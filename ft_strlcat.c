@@ -6,7 +6,7 @@
 /*   By: yhamdaou <yhamdaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 18:52:29 by yhamdaou          #+#    #+#             */
-/*   Updated: 2025/10/28 17:08:36 by yhamdaou         ###   ########.fr       */
+/*   Updated: 2025/10/30 16:02:12 by yhamdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 
 	i = 0;
 	srclen = ft_strlen(src);
-	if (!dst)
-		return (srclen + dstsize);
+	if (src && dstsize == 0)
+		return (dstsize);
 	dstlen = ft_strlen(dst);
 	if (dstsize <= dstlen)
 		return (srclen + dstsize);
@@ -40,15 +40,15 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	}
 }
 
-// int main()
-// {
-// 	char str[5] = "hey";
-// 	size_t i = ft_strlcat(str , "worlde", 2);
-// 	printf("%zu\n", i);
-// 	printf("%s\n", str);
+int main()
+{
+	// char str[3] = "hey";
+	// size_t i = ft_strlcat(str , "worlde", 10);
+	// printf("%zu\n", i);
+	// printf("%s\n", str);
 
-// 	char str1[5] = "hey";
-// 	size_t j = strlcat(str1 , "worlde", 2);
-// 	printf("%zu\n", j);
-// 	printf("%s\n", str1);
-//  }
+	char str1[10] = "\0";
+	size_t j = ft_strlcat(NULL , "", 0);
+	printf("%zu\n", j);
+	printf("%s\n", str1);
+ }

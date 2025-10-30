@@ -6,7 +6,7 @@
 /*   By: yhamdaou <yhamdaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 11:00:17 by yhamdaou          #+#    #+#             */
-/*   Updated: 2025/10/27 17:01:49 by yhamdaou         ###   ########.fr       */
+/*   Updated: 2025/10/29 17:49:52 by yhamdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,8 +35,9 @@ char	*ft_strrchr(const char *s, int c)
 }
 int main()
 {
-	char *s = ft_strrchr("halltvav", '\0');
-	printf("%s\n", s);
+	char *ab= "ef";
+	char *s = ft_strrchr("ef", 'f');
+	printf("%p %p\n", s,"ef");
 	
 	// char *s1 = strrchr("halltvav", '\0');
 	// printf("%s", s1);

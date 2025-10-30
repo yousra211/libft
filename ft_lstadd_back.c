@@ -6,7 +6,7 @@
 /*   By: yhamdaou <yhamdaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/18 15:03:18 by yhamdaou          #+#    #+#             */
-/*   Updated: 2025/10/23 16:16:24 by yhamdaou         ###   ########.fr       */
+/*   Updated: 2025/10/30 17:31:11 by yhamdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,20 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 		while (tmp->next)
 			tmp = tmp->next;
 		tmp->next = new;
+	}
+}
+int main()
+{
+	t_list *lst = NULL;
+	char c = 'a';
+	char d = 'b';
+	t_list *p = ft_lstnew(&c);
+	t_list *p1 = ft_lstnew(&d);
+	ft_lstadd_back(&lst, p);
+	ft_lstadd_back(&lst, p1);
+	while(lst)
+	{
+		printf("%c\n", *(char *)lst->content);
+		lst = lst->next;
 	}
 }

@@ -6,7 +6,7 @@
 /*   By: yhamdaou <yhamdaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 12:57:58 by yhamdaou          #+#    #+#             */
-/*   Updated: 2025/10/28 16:22:48 by yhamdaou         ###   ########.fr       */
+/*   Updated: 2025/10/30 13:08:53 by yhamdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ int	ft_atoi(const char *str)
 }
 int main()
 {
-	 char *str = "    \n-922337203685477580900";
+	 char *str = "    \n999999999999999999999999999999";
 	// char *str = "-21474836500";
 	int i = ft_atoi(str);
 	printf("%d\n", i);

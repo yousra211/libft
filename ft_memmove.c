@@ -6,7 +6,7 @@
 /*   By: yhamdaou <yhamdaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 18:29:30 by yhamdaou          #+#    #+#             */
-/*   Updated: 2025/10/27 14:55:56 by yhamdaou         ###   ########.fr       */
+/*   Updated: 2025/10/29 18:29:48 by yhamdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	unsigned char	*ptr_dst;
 	unsigned char	*ptr_src;
 
+	if (dst == src)
+		return (src);
 	ptr_dst = (unsigned char *)dst;
 	ptr_src = (unsigned char *)src;
 	if (src < dst && dst < src + len)
@@ -31,14 +33,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 		}
 	}
 	else
-	{
-		i = 0;
-		while (i < len)
-		{
-			ptr_dst[i] = ptr_src[i];
-			i++;
-		}
-	}
+		ft_memcpy(dst, src, len);
 	return (dst);
 }
 int main()

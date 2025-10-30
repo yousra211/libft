@@ -6,7 +6,7 @@
 /*   By: yhamdaou <yhamdaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 18:58:38 by yhamdaou          #+#    #+#             */
-/*   Updated: 2025/10/17 21:19:29 by yhamdaou         ###   ########.fr       */
+/*   Updated: 2025/10/30 16:39:23 by yhamdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,11 @@
 
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	if (lst && !(*lst) && new)
-		(*lst) = new;
-	if (lst && (*lst) && new)
-	{
-		new->next = (*lst);
-		(*lst) = new;
-	}
+	if (!new || !lst)
+		return;
+	new->next = (*lst);
+	(*lst) = new;
+		
 }
 // int main()
 // {
