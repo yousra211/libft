@@ -6,14 +6,14 @@
 /*   By: yhamdaou <yhamdaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 17:23:26 by yhamdaou          #+#    #+#             */
-/*   Updated: 2025/10/22 11:48:27 by yhamdaou         ###   ########.fr       */
+/*   Updated: 2025/11/01 16:52:12 by yhamdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <stdio.h>
 
-int	ft_strslen(char const *s, char c)
+static int	ft_strslen(char const *s, char c)
 {
 	int	i;
 	int	count;
@@ -32,7 +32,7 @@ int	ft_strslen(char const *s, char c)
 	return (count);
 }
 
-int	ft_strrlen(const char *str, char c)
+static int	ft_strrlen(const char *str, char c)
 {
 	int	i;
 
@@ -42,7 +42,20 @@ int	ft_strrlen(const char *str, char c)
 	return (i);
 }
 
-char	**ft_fill(char **p, char const *s, char c, int size)
+static char	**free_fail(char **p, int j)
+{
+	while (j >= 0)
+	{
+		free(p[j]);
+		p[j] = NULL;
+		j--;
+	}
+	free(p);
+	p = NULL;
+	return (NULL);
+}
+
+static char	**ft_fill(char **p, char const *s, char c, int size)
 {
 	int	i;
 	int	len;
@@ -58,7 +71,7 @@ char	**ft_fill(char **p, char const *s, char c, int size)
 		len = ft_strrlen(&s[i], c);
 		p[j] = malloc ((len + 1) * sizeof(char));
 		if (!p[j])
-			return (NULL);
+			return (free_fail(p, j));
 		k = 0;
 		while (s[i] && s[i] != c)
 			p[j][k++] = s[i++];
@@ -71,13 +84,9 @@ char	**ft_fill(char **p, char const *s, char c, int size)
 
 char	**ft_split(char const *s, char c)
 {
-	int		i;
 	int		size;
 	char	**p;
-	int		k;
 
-	i = 0;
-	k = 0;
 	if (!s)
 		return (NULL);
 	size = ft_strslen(s, c);

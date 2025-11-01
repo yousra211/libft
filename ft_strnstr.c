@@ -6,7 +6,7 @@
 /*   By: yhamdaou <yhamdaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 12:12:41 by yhamdaou          #+#    #+#             */
-/*   Updated: 2025/10/28 21:28:57 by yhamdaou         ###   ########.fr       */
+/*   Updated: 2025/11/01 17:31:32 by yhamdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,9 @@ char	*ft_strnstr(const char *str, const char *needle, size_t len)
 
 	i = 0;
 	j = 0;
-	int s_len = ft_strlen(needle);
 	while (i < len && str[i + j] && needle[j])
 	{
-		if (str[i + j] == needle[j])
+		if (i + j < len && str[i + j] == needle[j])
 			j++;
 		else
 		{
@@ -34,11 +33,17 @@ char	*ft_strnstr(const char *str, const char *needle, size_t len)
 		return ((char *)&str[i]);
 	return (NULL);
 }
-int main()
-{
-	char *s = "hello";
-	char *str = ft_strnstr(NULL,s, 0);
-	printf("%s\n", str);
-	// char *s1 = strnstr(NULL, s, 0);
-	// printf("%s", s1);
-}
+// int main()
+// {
+// 	char *str;
+// 	if (!(str = strnstr("", "x", 1120)))
+//         puts("NULL");
+//     else
+//         puts(str);
+// 
+// 	char *s = "hello";
+// 	char *str = strnstr("NULL",s, 100);
+// 	printf("%s\n", str);
+// 	// char *s1 = strnstr(NULL, s, 0);
+// 	// printf("%s", s1);
+// }

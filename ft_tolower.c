@@ -6,7 +6,7 @@
 /*   By: yhamdaou <yhamdaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 21:38:21 by yhamdaou          #+#    #+#             */
-/*   Updated: 2025/10/27 17:01:20 by yhamdaou         ###   ########.fr       */
+/*   Updated: 2025/11/01 16:52:54 by yhamdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@ int	ft_tolower(int c)
 		c += 32;
 	return (c);
 }
-int main()
-{
-	int c = ft_tolower('B');
-	int d = tolower('B');
-	printf("%c\n%c\n", c, d);
-}
+// int main()
+// {
+// 	int c = ft_tolower('B');
+// 	int d = tolower('B');
+// 	printf("%c\n%c\n", c, d);
+// }

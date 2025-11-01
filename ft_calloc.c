@@ -6,7 +6,7 @@
 /*   By: yhamdaou <yhamdaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 13:09:29 by yhamdaou          #+#    #+#             */
-/*   Updated: 2025/10/30 13:23:23 by yhamdaou         ###   ########.fr       */
+/*   Updated: 2025/11/01 18:33:20 by yhamdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,32 +20,35 @@ void	*ft_calloc(size_t count, size_t size)
 	if (count != 0 && size > SIZE_MAX / count )
 		return (NULL);
 	i = 0;
-	if (size == 0 || count == 0)
-		return (malloc(1));
 	ptr = malloc(count * size);
 	if (!ptr)
 		return (NULL);
-	while (i < count * size)
-	{
-		ptr[i] = 0;
-		i++;
-	}
+	ft_bzero(ptr, count * size);
 	return ((void *)ptr);
 }
-int main()
-{
-	// char *str = malloc(2);
-	// char *str1 = ft_calloc(0, 3);
-	// int i ;
-	// for (i = 0; i < 3; i++)
-	// 	printf("%d\n", str[i]);
+
+
+// int main()
+// {
+// 	char *s = ft_calloc(10, 0);
+
+// 	printf("%s\n", s);
+// }
+
+// int main()
+// {
+// 	// char *str = malloc(2);
+// 	// char *str1 = ft_calloc(0, 3);
+// 	// int i ;
+// 	// for (i = 0; i < 3; i++)
+// 	// 	printf("%d\n", str[i]);
 	
-	// while(*str1)
-	// {
-	// 	printf("%c", *str1);
-	// 	str1++;
-	// }
-	 int *p = calloc(-1, 0);
-	 if(!p)
-	 	printf("null");
-}
+// 	// while(*str1)
+// 	// {
+// 	// 	printf("%c", *str1);
+// 	// 	str1++;
+// 	// }
+// 	int *p = ft_calloc(5445451, 155454);
+// 	if(!p)
+// 	 	printf("null");
+// }

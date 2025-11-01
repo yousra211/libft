@@ -6,7 +6,7 @@
 /*   By: yhamdaou <yhamdaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 18:23:11 by yhamdaou          #+#    #+#             */
-/*   Updated: 2025/10/29 18:20:16 by yhamdaou         ###   ########.fr       */
+/*   Updated: 2025/11/01 15:44:44 by yhamdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	
 	i = 0;
 	if (dst == src)
-		return (src);
+		return (dst);
 	ptr_dst = (unsigned char *)dst;
 	ptr_src = (unsigned char *)src;
 	while (i < n)
@@ -29,12 +29,4 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 		i++;
 	}
 	return (dst);
-}
-int main()
-{
-	//char dst[] = "hello";
-	char src[] = "world";
-	ft_memcpy(src + 2, src , 3);
-	
-	printf("%s", src);
 }

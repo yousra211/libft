@@ -1,45 +1,63 @@
 #include "libft.h"
 #include <stdio.h>
 
-void del(void *lst);
-void	ft_lstdelone(t_list *lst, void (*del)(void *));
-void	ft_lstadd_front(t_list **lst, t_list *new);
-t_list	*ft_lstnew(void *content);
+int a = 1;
+int a;
 
-void print(t_list *lst)
+char    *f()
 {
-    while (lst != NULL)
-    {
-        printf("%d\n", *(int *)lst->content);
-        lst = lst->next;
-    }
+    a = 5;
+    return (a);
+}
+
+int main()
+{
+    char    *s1 = "abcd";
+    char    *s2 = "abcd";
+
+    printf("%p %p\n", s1, s1 + 2);
 }
 
 
-int main(void)
-{
-	t_list *lst = NULL;
-    int *a = malloc(sizeof(int));
-    int *b = malloc(sizeof(int));
-    int *c = malloc(sizeof(int));
-    *a = 1;
-    *b = 3;
-    *c = 4;
+// void del(void *lst);
+// void	ft_lstdelone(t_list *lst, void (*del)(void *));
+// void	ft_lstadd_front(t_list **lst, t_list *new);
+// t_list	*ft_lstnew(void *content);
+
+// void print(t_list *lst)
+// {
+//     while (lst != NULL)
+//     {
+//         printf("%d\n", *(int *)lst->content);
+//         lst = lst->next;
+//     }
+// }
 
 
-    ft_lstadd_front(&lst, ft_lstnew(a));
-    ft_lstadd_front(&lst, ft_lstnew(b));
-    ft_lstadd_front(&lst, ft_lstnew(c));
+// int main(void)
+// {
+// 	t_list *lst = NULL;
+//     int *a = malloc(sizeof(int));
+//     int *b = malloc(sizeof(int));
+//     int *c = malloc(sizeof(int));
+//     *a = 1;
+//     *b = 3;
+//     *c = 4;
 
-	print(lst);
-	ft_lstdelone(lst, &del);
-	lst = lst->next;
-	print(lst);
 
-	    while (lst)
-    {
-        t_list *tmp = lst->next;
-        ft_lstdelone(lst, &del);
-        lst = tmp;
-    }
-}
+//     ft_lstadd_front(&lst, ft_lstnew(a));
+//     ft_lstadd_front(&lst, ft_lstnew(b));
+//     ft_lstadd_front(&lst, ft_lstnew(c));
+
+// 	print(lst);
+// 	ft_lstdelone(lst, &del);
+// 	lst = lst->next;
+// 	print(lst);
+
+// 	    while (lst)
+//     {
+//         t_list *tmp = lst->next;
+//         ft_lstdelone(lst, &del);
+//         lst = tmp;
+//     }
+// }

@@ -6,7 +6,7 @@
 /*   By: yhamdaou <yhamdaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 14:23:30 by yhamdaou          #+#    #+#             */
-/*   Updated: 2025/10/28 17:35:59 by yhamdaou         ###   ########.fr       */
+/*   Updated: 2025/11/01 18:36:16 by yhamdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 }
 // int main()
 // {
-// 	char *s = ft_substr("helloooooo" , 3, 4);
+// 	char *s = ft_substr("ASD", 0, 0);
 // 	printf("%s", s);
 // }

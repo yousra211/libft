@@ -6,7 +6,7 @@
 /*   By: yhamdaou <yhamdaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 12:39:28 by yhamdaou          #+#    #+#             */
-/*   Updated: 2025/10/28 17:37:17 by yhamdaou         ###   ########.fr       */
+/*   Updated: 2025/11/01 17:54:26 by yhamdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,19 +42,17 @@ char	*ft_strtrim(char const *s1, char const *set)
 	while (s1[i] && ft_exist(set, s1[i]))
 		i++;
 	start = i;
-	while (s1[i] && !ft_exist(set, s1[i]))
-	{
-		size++;
-		i++;
-	}
-	str = ft_substr(s1, start, size);
+	int end = ft_strlen(s1) - 1;
+	while (end >= 0 && ft_exist(set, s1[end]))
+		end--;
+	str = ft_substr(s1, start, end - start + 1);
 	return (str);
 }
 
-int main()
-{
-	char *s1 = "abchelloabc";
-	char *set = "abcdd";
-	char *dst = ft_strtrim(s1, set);
-	printf("%s",dst);
-}
+// int main()
+// {
+// 	char *s1 = "abcxxxabdxxabc";
+// 	char *set = "abc";
+// 	char *dst = ft_strtrim(s1, set);
+// 	printf("-%s-\n",dst);
+// }

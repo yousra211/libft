@@ -6,7 +6,7 @@
 /*   By: yhamdaou <yhamdaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 18:34:49 by yhamdaou          #+#    #+#             */
-/*   Updated: 2025/10/29 17:33:43 by yhamdaou         ###   ########.fr       */
+/*   Updated: 2025/11/01 16:48:20 by yhamdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,18 +31,20 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	dst[i] = '\0';
 	return (srclen);
 }
-int main()
-{
-	char dst[6] = "ef";
-	char *src = "hello";
-	char dst1[6] = "ef";
-	char *src1 = "hello";
-	size_t test1 = ft_strlcpy(dst, src, 2);
-	size_t test2 = ft_strlcpy(dst1, src1, 6);
-	printf("t1 : |%s|  t2 : |%s| %zu %zu",dst,dst1,test1,test2);
+// int main()
+// {
+// 	printf("%zu", ft_strlcpy("", "", 1));
+	
+	// char dst[6] = "ef";
+	// char *src = "hello";
+	// char dst1[6] = "ef";
+	// char *src1 = "hello";
+	// size_t test1 = ft_strlcpy(dst, src, 2);
+	// size_t test2 = ft_strlcpy(dst1, src1, 6);
+	// printf("t1 : |%s|  t2 : |%s| %zu %zu",dst,dst1,test1,test2);
 	// printf("%zu\n", i);
 	// printf("%s\n", dst);
 	
 	// size_t j = strlcpy(dst1, src1, 0);
 
-}
+// }

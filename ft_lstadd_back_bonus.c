@@ -1,35 +1,48 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstlast.c                                       :+:      :+:    :+:   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yhamdaou <yhamdaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/17 21:42:32 by yhamdaou          #+#    #+#             */
-/*   Updated: 2025/10/30 17:26:08 by yhamdaou         ###   ########.fr       */
+/*   Created: 2025/10/18 15:03:18 by yhamdaou          #+#    #+#             */
+/*   Updated: 2025/11/01 19:09:20 by yhamdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstlast(t_list *lst)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	if (!lst)
-		return (NULL);
-	while (lst->next)
-		lst = lst->next;
-	return (lst);
+	t_list	*tmp;
+
+	if (lst && !(*lst) && new)
+	{
+		(*lst) = new;
+		return ;
+	}
+	if (lst && (*lst) && new)
+	{
+		tmp = (*lst);
+		while (tmp->next)
+			tmp = tmp->next;
+		tmp->next = new;
+	}
 }
+
+
 int main()
 {
 	t_list *lst = NULL;
-	int x = 8;
-	int y = 9;
-	t_list *new1 = ft_lstnew(&x);
-	t_list *new2 = ft_lstnew(&y);
-	ft_lstadd_front(&lst, new1);
-	ft_lstadd_back(&lst, new2);
-	t_list *p = ft_lstlast(lst);
-	printf("%d", *(int *)p->content);
-	
+	char c = 'a';
+	char d = 'b';
+	t_list *p = ft_lstnew(&c);
+	t_list *p1 = ft_lstnew(&d);
+	ft_lstadd_back(&lst, p);
+	ft_lstadd_back(&lst, p1);
+	while(lst)
+	{
+		printf("%c\n", *(char *)lst->content);
+		lst = lst->next;
+	}
 }

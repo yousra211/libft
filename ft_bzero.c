@@ -6,7 +6,7 @@
 /*   By: yhamdaou <yhamdaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 18:19:00 by yhamdaou          #+#    #+#             */
-/*   Updated: 2025/10/29 17:12:31 by yhamdaou         ###   ########.fr       */
+/*   Updated: 2025/10/31 19:47:13 by yhamdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,11 +27,11 @@ void	ft_bzero(void *s, size_t n)
 		i++;
 	}
 }
-int main()
-{
-	int i = 0;
-	unsigned char *p = malloc(4);
-	bzero(NULL, 0);
+// int main()
+// {
+// 	int i = 0;
+// 	unsigned char *p = malloc(4);
+// 	bzero(NULL, 0);
 	// while(i < 4)
 	// {
 	// 	printf("%c",p[i]);
@@ -46,4 +46,4 @@ int main()
 	// 	printf("%c",ptr[i]);
 	// 	i++;
 	// }
-}
+// }

@@ -6,7 +6,7 @@
 /*   By: yhamdaou <yhamdaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 18:58:38 by yhamdaou          #+#    #+#             */
-/*   Updated: 2025/10/30 16:39:23 by yhamdaou         ###   ########.fr       */
+/*   Updated: 2025/11/01 19:09:59 by yhamdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ void	ft_lstadd_front(t_list **lst, t_list *new)
 	(*lst) = new;
 		
 }
+
 // int main()
 // {
 // 	t_list *lst = NULL;

@@ -6,16 +6,22 @@
 /*   By: yhamdaou <yhamdaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 13:04:48 by yhamdaou          #+#    #+#             */
-/*   Updated: 2025/10/29 11:56:00 by yhamdaou         ###   ########.fr       */
+/*   Updated: 2025/11/01 18:24:33 by yhamdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
-void    to_upper_odd(unsigned int i, char *c)
-{
-    if (i % 2 == 1 && *c >= 'a' && *c <= 'z')
-        *c = (*c - 32);
-}
+// void    to_upper_odd(unsigned int i, char *c)
+// {
+//     if (i % 2 == 1 && *c >= 'a' && *c <= 'z')
+//         *c = (*c - 32);
+// }
+
+// void    xxxxxx(unsigned int i, char *c)
+// {
+//     if (i % 2 == 1 && *c >= 'a' && *c <= 'z')
+//         *c = (*c - 32);
+// }
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
@@ -31,10 +37,12 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 		}
 	}
 }
-int main()
-{
-	char s[] = "hellloow";
-	ft_striteri(s, to_upper_odd);
-	printf("%s", s);
+// int main()
+// {
+// 	void (*f[])(unsigned int, char*) = {to_upper_odd, xxxxxx};
 	
-}
+// 	char s[] = "hellloow";
+// 	ft_striteri(s, f[0]);
+// 	printf("%s", s);
+	
+// }

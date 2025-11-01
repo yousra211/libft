@@ -6,7 +6,7 @@
 /*   By: yhamdaou <yhamdaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 14:31:53 by yhamdaou          #+#    #+#             */
-/*   Updated: 2025/10/28 19:37:29 by yhamdaou         ###   ########.fr       */
+/*   Updated: 2025/11/01 16:52:09 by yhamdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,10 @@ void	ft_putstr_fd(char *s, int fd)
 		i++;
 	}
 }
-int main()
-{
-	int fd = open("fd2.txt", O_WRONLY);
+// int main()
+// {
+// 	int fd = open("fd2.txt", O_WRONLY);
 	
-	ft_putstr_fd("hello", fd);
-	close(fd);
-}
+// 	ft_putstr_fd("hello", fd);
+// 	close(fd);
+// }

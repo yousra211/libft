@@ -6,7 +6,7 @@
 /*   By: yhamdaou <yhamdaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 14:15:45 by yhamdaou          #+#    #+#             */
-/*   Updated: 2025/10/28 17:34:17 by yhamdaou         ###   ########.fr       */
+/*   Updated: 2025/11/01 18:33:04 by yhamdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,16 +18,17 @@ char	*ft_strdup(const char *s1)
 	int		srclen;
 	char	*dst;
 
-	srclen = 0;
+	srclen = ft_strlen(s1);
 	i = 0;
-	while (s1[srclen])
-		srclen++;
-	dst = malloc (srclen * sizeof(char));
+	dst = malloc ((srclen + 1) * sizeof(char));
+	if (!dst)
+		return (NULL);
 	while (i < srclen)
 	{
 		dst[i] = s1[i];
 		i++;
 	}
+	dst[i] = '\0';
 	return (dst);
 }
 // int main()

@@ -6,7 +6,7 @@
 /*   By: yhamdaou <yhamdaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 17:47:53 by yhamdaou          #+#    #+#             */
-/*   Updated: 2025/10/23 12:14:46 by yhamdaou         ###   ########.fr       */
+/*   Updated: 2025/11/01 16:51:40 by yhamdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	ft_isprint(int c)
 
 // int main()
 // {
-// 	int i = ft_isprint(127);
+// 	int i = ft_isprint('c');
 // 	int j = isprint(127);
 // 	printf("%d \n%d \n" , i, j);
 // }
