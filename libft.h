@@ -6,7 +6,7 @@
 /*   By: yhamdaou <yhamdaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 14:42:28 by yhamdaou          #+#    #+#             */
-/*   Updated: 2025/11/01 18:52:57 by yhamdaou         ###   ########.fr       */
+/*   Updated: 2025/11/02 17:28:12 by yhamdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,6 @@
 # define LIBFT_H
 
 # include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
 #include <limits.h>
 #include <unistd.h>
 

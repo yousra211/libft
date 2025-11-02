@@ -6,21 +6,11 @@
 /*   By: yhamdaou <yhamdaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 12:57:58 by yhamdaou          #+#    #+#             */
-/*   Updated: 2025/11/01 17:05:11 by yhamdaou         ###   ########.fr       */
+/*   Updated: 2025/11/02 17:20:20 by yhamdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-// int	ft_depasser(char *str)
-// {
-// 	int len;
-
-// 	len = 0;
-// 	while(str[len])
-// 		len++;
-		
-// }
 
 int	ft_atoi(const char *str)
 {
@@ -50,15 +40,3 @@ int	ft_atoi(const char *str)
 	}
 	return ((int)n * signe);
 }
-// int main()
-// {
-// 	 char *str = "    \n9223372036854775806";
-// 	// char *str = "-21474836500";
-// 	int i = ft_atoi(str);
-// 	printf("%d\n", i);
-// 	//   printf("LONG_MAX = %ld\n", LONG_MAX);
-//     // printf("LONG_MIN = %ld\n", LONG_MIN);
-
-// 	int j = atoi(str);
-// 	printf("%d\n", j);
-// }
